@@ -19,7 +19,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update(){
         bool flag = input != 0 ? true : false;
+        int angleAxisY = input < 0 ? 180 : 0;
+
         anime.SetBool ("isRunning", flag);
+        transform.eulerAngles = new Vector3 (0, angleAxisY, 0);
     }
 
     void FixedUpdate(){
