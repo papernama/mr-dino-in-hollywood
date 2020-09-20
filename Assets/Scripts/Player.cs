@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     }
 
     void FixedUpdate(){
-        // Storing player's input
+        // Storing player's input 
         input = Input.GetAxisRaw("Horizontal");
 
         // Moving player
