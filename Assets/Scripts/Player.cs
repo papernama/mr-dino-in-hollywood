@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
         if(health <= 0) {
             // Destroy player game object
             Destroy(gameObject);
+            print("GAME OVER");
 		}
 	}
 }
