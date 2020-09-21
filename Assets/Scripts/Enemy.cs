@@ -33,4 +33,9 @@ public class Enemy : MonoBehaviour{
         // Pass on the damage this enemy can do to the player.
         player.TakeDamage(damage);
 	}
+
+    // Destory when enemy is off-screen
+    void OnBecameInvisible() {
+        Destroy(gameObject);
+    }
 }
