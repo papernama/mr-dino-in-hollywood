@@ -35,5 +35,7 @@ public class Spawner : MonoBehaviour{
 
         // Resets the timer
         timeBtwSpawns = startTimeBtwSpawns;
+
+
     }
 }

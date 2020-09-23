@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
         anime.SetBool ("isRunning", flag);
         transform.eulerAngles = new Vector3 (0, angleAxisY, 0);
+
+        anime.SetBool("isHit", false);
     }
 
     void FixedUpdate(){
@@ -38,7 +40,10 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage) {
         health -= damage;
 
-        if(health <= 0) {
+        // Flicker color of the player character to red
+        anime.SetBool("isHit", true);
+
+        if (health <= 0) {
             // Destroy player game object
             Destroy(gameObject);
             print("GAME OVER");
